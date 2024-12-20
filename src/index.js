@@ -91,7 +91,7 @@ server.patch("/api/dogs/:id", async (req, res) => {
     res.status(200).json({ success: true });
 })
 
-server.delete("/api/dog/:id", async (req, res) => {
+server.delete("/api/dogs/:id", async (req, res) => {
     const connection = await getDBConnection();
     const query = "DELETE from dogs WHERE id = ?";
     const [result] = await connection.query(query, [req.params.id]);
