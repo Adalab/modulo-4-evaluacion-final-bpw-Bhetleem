@@ -1,3 +1,22 @@
+CREATE DATABASE apariv;
+
+USE apariv;
+
+CREATE TABLE dogs(
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(45) NOT NULL,
+    breed VARCHAR(45) NOT NULL,
+    DOB DATE NOT NULL,
+    behaviour TINYTEXT NOT NULL
+);
+
+CREATE TABLE adopters(
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(45) NOT NULL,
+    lastname VARCHAR(100) NOT NULL,
+    DNI INT NOT NULL
+);
+
 INSERT INTO dogs (name, breed, DOB, behaviour) VALUES 
 ('Penny', 'Breton', '2010-11-01', 'Inteligente y muy cariñosa. Asustadiza con desconocidos. Lider'), 
 ('Funky', 'Pero de aguas', '2019-03-01', 'Cariñoso y sumiso. Confiado y juguetón'), 
